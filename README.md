@@ -30,7 +30,7 @@ PS> rustup toolchain install stable-i686-pc-windows-msvc
 ```
 ___
 ### Running and Debugging
-- Type just following commands in your favorite terminal app
+- Type just following commands in your favourite terminal app
 
 ```
 PS> git clone https://github.com/ierturk/zsc31050-calib-rust.git
@@ -50,7 +50,7 @@ PS> cargo build --target x86_64-pc-windows-msvc -p test_gui
 If you prefer using VS Code to run tasks:   
 Use ctrl-shift P then Tasks: Run task and select one
 
-If everything is fine, you'll get following screen and see the communication.
+If everything is fine, you will obtain results similar to those depicted in the header image.
 
 ## License
 
