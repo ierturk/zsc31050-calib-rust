@@ -6,7 +6,7 @@
    
 The aim of the project is to develop a comprehensive system that runs on Windows 11 and is capable of communicating with remote systems using topics, such as in ROS2, instead of IP addresses.
 
-There is a specific requirement for this project: we have a 32-bit legacy DLL, and our application should be 64-bit. In this case at least we need to develop two modules, one of them 32-bit and the other one is 64-bit. Consequently, we have to employ an IPC to exchange data between modules. Thre are lots of possibility such as gRPC but we don't wan to use IP addresses but topics. Even though it is not a best practice, this project wıll be an learning by doing project. Our main aim is discovering possibilities.   
+There is a specific requirement for this project: we have a 32-bit legacy DLL, and our application should be 64-bit. In this case at least we need to develop two modules, one of them 32-bit and the other one is 64-bit. Consequently, we have to employ an IPC to exchange data between modules. There are lots of possibility such as gRPC but we don’t want to use IP addresses but topics. Even though it is not a best practice, this project will be a learning by doing project. Our main aim is discovering possibilities.
 
 So let’s start!
 ___
@@ -30,7 +30,7 @@ PS> rustup toolchain install stable-i686-pc-windows-msvc
 ```
 ___
 ### Running and Debugging
-- Type just following commads in your faworite terninall app
+- Type just following commands in your favorite terminal app
 
 ```
 PS> git clone https://github.com/ierturk/zsc31050-calib-rust.git
@@ -48,9 +48,9 @@ PS> cargo build --target x86_64-pc-windows-msvc -p test_gui
 ```
 
 If you prefer using VS Code to run tasks:   
-Use ctrl-shift P then Taks: Run task and selet one
+Use ctrl-shift P then Tasks: Run task and select one
 
-If everything is fine, you'll get follwing screen and see the communication.
+If everything is fine, you'll get following screen and see the communication.
 
 ## License
 
