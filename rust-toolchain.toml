@@ -1,0 +1,10 @@
+## Copyright (c) 2025, Ibrahim Erturk <me@erturk.me>, ErturkMe
+## Licensed under the BSD 3-Clause License.
+## See the LICENSE file in the project root for more information.
+
+[toolchain]
+channel = "stable"
+# components = ["rust-src", "rustfmt", "clippy", "rust-analyzer", rust-docs]
+
+[target]
+targets = ["i686-pc-windows-msvc", "x86_64-pc-windows-msvc"]

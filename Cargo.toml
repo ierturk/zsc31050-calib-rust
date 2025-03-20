@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "common",
+    "rbic1_dll_svc",
+    "test_gui"
+]
+resolver = "3"

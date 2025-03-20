@@ -1,0 +1,47 @@
+# cargo-features = ["per-package-target"]
+
+[package]
+name = "rbic1_dll_svc"
+version = "0.1.0"
+edition = "2024"
+# forced-target = "i686-pc-windows-msvc"
+# default-target = "i686-pc-windows-msvc"
+
+license = "BSD-3-Clause"
+authors = ["Ibrahim Erturk <me@erturk.me>, ErturkMe"]
+
+description = "A RPC service library for the zsc31050-calib-rust project"
+homepage = "https://github.com/erturkme/zsc31050-calib-rust"
+repository = "https://github.com/erturkme/zsc31050-calib-rust"
+# documentation = "https://docs.rs/common"
+keywords = ["dds", "rpc", "async", "binding"]
+categories = ["data-distribution-service", "remote-procedure-call"]
+readme = "README.md"
+
+[dependencies]
+dust_dds = "0.12"
+tokio = { version = "1.44", features = ["full"] }
+serde = "1.0"
+serde_json = "1.0"
+libc = "0.2"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+uuid = { version ="1.16", features = ["v4"]}
+
+common = { path = "../common" }
+
+[features]
+default = ["client", "server"]
+server = []
+client = []
+
+[[example]]
+name = "server"
+path = "examples/server.rs"
+
+[[example]]
+name = "client"
+path = "examples/client.rs"

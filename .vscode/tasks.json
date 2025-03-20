@@ -1,0 +1,101 @@
+// Copyright (c) 2025, Ibrahim Erturk <me@erturk.me>, ErturkMe
+// Licensed under the BSD 3-Clause License.
+// See the LICENSE file in the project root for more information.
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        // Build Tasks
+        {
+            "label": "build server example",
+            "type": "shell",
+            "command": "cargo build --target i686-pc-windows-msvc --no-default-features -p rbic1_dll_svc --example server",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$rustc"],
+            "detail": "Build the server example"
+        },
+        {
+            "label": "build client example",
+            "type": "shell",
+            "command": "cargo build --target x86_64-pc-windows-msvc --no-default-features -p rbic1_dll_svc --example client",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$rustc"],
+            "detail": "Build the client example"
+        },
+        {
+            "label": "build test gui",
+            "type": "shell",
+            "command": "cargo build --target x86_64-pc-windows-msvc -p test_gui",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$rustc"],
+            "detail": "Build the test GUI"
+        },
+
+        // Run Tasks
+        {
+            "label": "run server example",
+            "type": "shell",
+            "command": "cargo run --target i686-pc-windows-msvc --no-default-features -p rbic1_dll_svc --example server",
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "detail": "Run the server example"
+        },
+        {
+            "label": "run client example",
+            "type": "shell",
+            "command": "cargo run --target x86_64-pc-windows-msvc --no-default-features -p rbic1_dll_svc --example client",
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "detail": "Run the client example"
+        },
+        {
+            "label": "run test gui",
+            "type": "shell",
+            "command": "cargo run --target x86_64-pc-windows-msvc -p test_gui",
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "detail": "Run the test GUI"
+        },
+
+        // Compound Tasks
+        {
+            "label": "build and run server example",
+            "dependsOn": ["build server example", "run server example"],
+            "type": "shell",
+            "problemMatcher": [],
+            "detail": "Build and run the server example"
+        },
+        {
+            "label": "build and run client example",
+            "dependsOn": ["build client example", "run client example"],
+            "type": "shell",
+            "problemMatcher": [],
+            "detail": "Build and run the client example"
+        },
+        {
+            "label": "build and run test gui",
+            "dependsOn": ["build test gui", "run test gui"],
+            "type": "shell",
+            "problemMatcher": [],
+            "detail": "Build and run the test GUI"
+        }
+    ]
+}

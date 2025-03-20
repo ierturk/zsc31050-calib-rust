@@ -1,0 +1,9 @@
+## Copyright (c) 2025, Ibrahim Erturk <me@erturk.me>, ErturkMe
+## Licensed under the BSD 3-Clause License.
+## See the LICENSE file in the project root for more information.
+
+[target.i686-pc-windows-msvc]
+runner = "cargo run -p rbic1_dll_svc --bin server --target i686-pc-windows-msvc"
+
+[build]
+target = "i686-pc-windows-msvc"

@@ -1,0 +1,25 @@
+[package]
+name = "common"
+version = "0.1.0"
+edition = "2024"
+
+license = "BSD-3-Clause"
+authors = ["Ibrahim Erturk <me@erturk.me>, ErturkMe"]
+
+description = "A common library for the zsc31050-calib-rust project"
+homepage = "https://github.com/erturkme/zsc31050-calib-rust"
+repository = "https://github.com/erturkme/zsc31050-calib-rust"
+# documentation = "https://docs.rs/common"
+keywords = ["rust", "dds", "rpc", "async", "binding"]
+categories = ["data-distribution-service", "remote-procedure-call"]
+readme = "README.md"
+
+[dependencies]
+dust_dds = "0.12"
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "2"
+
+[lib]
+name = "common_lib"
+path = "src/lib.rs"
+crate-type = ["lib", "cdylib"]

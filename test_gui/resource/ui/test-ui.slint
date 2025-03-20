@@ -1,0 +1,41 @@
+// Copyright (c) 2025, Ibrahim Erturk <me@erturk.me>, ErturkMe
+// Licensed under the BSD 3-Clause License.
+// See the LICENSE file in the project root for more information.
+
+import { Button, VerticalBox } from "std-widgets.slint";
+
+export component AppWindow inherits Window {
+    in-out property <int> counter: 42;
+    in-out property <string> version: "Unreleased";
+    callback request-increase-value();
+    callback get-dll-version();
+
+    VerticalBox {
+        Text {
+            text: "Counter: \{root.counter}";
+        }
+        Button {
+            text: "Increase value";
+            clicked => {
+                root.request-increase-value();
+            }
+        }
+
+        Rectangle {
+            height: 20px;
+        }
+
+
+        Text {
+            text: "Message: \{root.version}";
+        }
+        Button {
+            text: "Get DLL Version";
+            clicked => {
+                root.get-dll-version();
+            }
+        }
+
+
+    }
+}
