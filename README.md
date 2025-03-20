@@ -33,7 +33,7 @@ ___
 - Type just following commads in your faworite terninall app
 
 ```
-PS> git cline https://github.com/ierturk/zsc31050-calib-rust.git
+PS> git clone https://github.com/ierturk/zsc31050-calib-rust.git
 PS> cd zsc31050-calib-rust
 
 ## those commands need to be run on splitted terminals
